@@ -1,0 +1,137 @@
+body{
+    background:#dcdcdc;
+    font-family:"Times New Roman";
+}
+
+.container{
+    width:730px;
+    margin:10px auto;
+    border:2px solid blue;
+    background:#ebb278;
+}
+
+.header{
+    text-align:center;
+    padding-top:10px;
+    height:110px;
+}
+
+.header img{
+    width:220px;
+    height:55px;
+}
+
+.header h1{
+    margin-top:5px;
+    font-size:24px;
+}
+
+.weather{
+    width:705px;
+    margin:auto;
+    background:#d8d3a8;
+    border:1px solid #c2bc93;
+    text-align:center;
+    padding:5px 0;
+}
+
+.weather a{
+    color:blue;
+    font-size:13px;
+}
+
+.weather p{
+    margin:2px;
+    font-size:13px;
+}
+
+.main{
+    width:730px;
+}
+
+.content{
+    width:545px;
+    float:left;
+    padding:6px;
+}
+
+.article{
+    margin-bottom:15px;
+}
+
+.article h2{
+    color:#c85be2;
+    font-size:20px;
+    margin-bottom:5px;
+}
+
+.text{
+    font-size:13px;
+    line-height:1.25;
+}
+
+.text p{
+    margin-top:0;
+    margin-bottom:8px;
+}
+
+.image-box{
+    float:right;
+    width:185px;
+    margin-left:10px;
+    margin-top:-5px;
+    margin-bottom:5px;
+    text-align:center;
+}
+
+.image-box img{
+    width:185px;
+    height:145px;
+    border:1px solid #444;
+}
+
+.image-box span{
+    font-size:10px;
+}
+
+.image-left{
+    float:left;
+    width:160px;
+    margin-right:8px;
+    margin-top:2px;
+}
+
+.image-left img{
+    width:160px;
+    height:115px;
+    border:1px solid #333;
+}
+
+.sidebar{
+    width:155px;
+    float:right;
+    background:#72f297;
+    padding:6px;
+    min-height:600px;
+}
+
+.sidebar h3,
+.sidebar h4{
+    color:#c85be2;
+    font-size:16px;
+    margin-top:3px;
+    margin-bottom:8px;
+}
+
+.sidebar a{
+    display:block;
+    color:blue;
+    font-size:12px;
+    margin-bottom:1px;
+}
+
+.main:after{
+    content:"";
+    display:block;
+    clear:both;
+}
