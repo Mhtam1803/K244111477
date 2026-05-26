@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Login Result</title>
+</head>
+<body>
+    <div style="width:500px;margin:40px auto;padding:20px;border:1px solid #ccc;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;">
+        <h2>Thông tin đăng nhập</h2>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const username = params.get('username') || '';
+        const password = params.get('password') || '';
+        document.getElementById('result').textContent =
+            `Username: ${username} - Password: ${password}`;
+    </script>
+</body>
+</html>

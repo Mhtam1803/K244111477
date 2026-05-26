@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>Provinces</h1>
+        <form name="provincesForm" >
+
+        <select name="provinces" id="provinces" onchange="provincesForm.selectedProvince.value=this.value; provincesForm.selectedProvinceName.value=this.options[this.selectedIndex].text">
+            <option value="hanoi">Hà Nội </option>
+            <option value="hcm">TP. Hồ Chí Minh</option>
+            <option value="dn">Đà Nẵng</option>
+        </select>
+        <p> Value of selected province</p>
+        <input type="text" name="selectedProvince" id="selectedProvince" readonly>
+        <p>Name of selected province</p>
+        <input type="text" name="selectedProvinceName" id="selectedProvinceName" readonly>
+        </form>
+    </body>
+</html>
