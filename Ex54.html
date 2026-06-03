@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Page Title</title>
+           <script>
+            function solveEquation(operation) {
+                var form = document.forms['myForm'];
+                var a = parseFloat(form.input_a.value);
+                var b = parseFloat(form.input_b.value);
+                var c = parseFloat(form.input_c.value);
+                var result = "";
+
+                if (isNaN(a)) a = 0;
+                if (isNaN(b)) b = 0;
+                if (isNaN(c)) c = 0;
+
+                switch (operation) {
+                    case 'max':
+                        result = Math.max(a, b, c);
+                        break;
+                    case 'min':
+                        result = Math.min(a, b, c);
+                        break;
+                    case 'sin':
+                        result = Math.sin(a);
+                        break;
+                    case 'cos':
+                        result = Math.cos(a);
+                        break;
+                    case 'power':
+                        result = Math.pow(a, b);
+                        break;
+                    default:
+                        result = "Dữ liệu không hợp lệ";
+                }
+
+                form.input_result.value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name ="myForm">
+            <table border = "1">
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" name="input_a" /></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" name="input_b" /></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="text" name="input_c" /></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td><input type="text" name="input_result" readonly /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" onclick="solveEquation('max')" value="Max">
+                        <input type ="button" onclick="solveEquation('min')" value="Min">
+                        <input type="button" onclick="solveEquation('sin')" value="sin(a)">
+                        <input type="button" onclick="solveEquation('cos')" value="cos(a)">
+                        <input type="button" onclick="solveEquation('power')" value="a^b">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

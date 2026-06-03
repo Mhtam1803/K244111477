@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Page Title</title>
+           <script>
+            function solveEquation(operation) {
+                var form = document.forms['myForm'];
+                var a = parseFloat(form.input_a.value);
+                var b = parseFloat(form.input_b.value);
+                var c = parseFloat(form.input_c.value);
+                var result = "";
+
+                if (operation === 'findsolutions') {
+                   if (a === 0) {
+                    if (b === 0) {
+                        if (c === 0) {
+                            result = 'Phương trình có vô số nghiệm';
+                        } else {
+                            result = 'Phương trình vô nghiệm';
+                        }
+                    } else {
+                        var x = -c / b;
+                        result = 'x = ' + x;
+                    }
+            } else {
+                var discriminant = b * b - 4 * a * c;
+
+                if (discriminant > 0) {
+                    var x1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+                    var x2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+                    result = 'x₁ = ' + x1 + '; x₂ = ' + x2;
+                } else if (discriminant === 0) {
+                    var x = -b / (2 * a);
+                    result = 'x₁ = x₂ = ' + x;
+                } else {
+                    result = 'Phương trình vô nghiệm (không có nghiệm thực)';
+                }
+}
+                } else if (operation === 'clear') {
+                    form.input_a.value = "";
+                    form.input_b.value = "";
+                    form.input_c.value = "";
+                    form.input_result.value = "";
+                    return;
+                } else {
+                    result = "Dữ liệu không hợp lệ";
+                }
+
+                form.input_result.value = result;
+            }
+        </script>
+    </head>
+    <body>
+        <form name ="myForm">
+            <table border = "1">
+                <thead>
+                    <tr>
+                        <th colspan="2">The quadratic equation</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td>a:</td>
+                    <td><input type="text" name="input_a" /></td>
+                </tr>
+                <tr>
+                    <td>b:</td>
+                    <td><input type="text" name="input_b" /></td>
+                </tr>
+                <tr>
+                    <td>c:</td>
+                    <td><input type="text" name="input_c" /></td>
+                </tr>
+                <tr>
+                    <td>Result:</td>
+                    <td><input type="text" name="input_result" readonly /></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="button" onclick="solveEquation('findsolutions')" value="Find Solutions">
+                        <input type="button" onclick="solveEquation('clear')" value="Clear">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
