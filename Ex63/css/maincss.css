@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+th, td {
+    padding: 3px;
+}
+.table-header {
+    background-color: blue;
+    color: white;
+}
+
+.bg-blue { background-color: blue; color: white; }
+.bg-red { background-color: red; color: white; }
+.bg-yellow { background-color: yellow; color: black; }
+.bg-green { background-color: green; color: white; }
+.bg-violet { background-color: violet; color: white; }
